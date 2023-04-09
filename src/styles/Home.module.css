@@ -1,0 +1,117 @@
+.main {
+  width: 100%;
+  height: 100vh;
+}
+
+.image__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.image__container img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  overflow: auto;
+}
+
+.title,
+.subtitle {
+  position: absolute;
+  font-family: var(--font-titles);
+  font-size: 1.6rem;
+  text-transform: uppercase;
+
+  transform: translate(-50%, 6vw);
+}
+
+
+.title {
+  top: 6rem;
+  left: 50%;
+}
+
+
+.subtitle {
+  bottom: 17rem;
+  left: 50%;
+
+}
+
+@media screen and (min-width: 450px) {
+  .image__container>img {
+    height: 150%;
+  }
+
+  .title,
+  .subtitle {
+    font-size: 2.5rem;
+    transform: translate(-50%, 10vw);
+  }
+
+  .subtitle {
+    transform: translate(-50%, 36vh);
+
+  }
+}
+
+@media screen and (min-width: 650px) {
+
+  .title,
+  .subtitle {
+    font-size: 3.5rem;
+  }
+
+  /* 
+  .subtitle {
+    transform: translate(-50%, 36vh);
+
+  } */
+}
+
+@media screen and (min-width: 950px) {
+  .image__container>img {
+    height: auto;
+  }
+
+  .title,
+  .subtitle {
+    font-size: 5rem;
+  }
+
+  .subtitle {
+    transform: translate(-50%, 120vh);
+
+  }
+}
+
+@media screen and (min-width: 1400px) {
+
+  .title,
+  .subtitle {
+    font-size: 6rem;
+  }
+
+  /* .subtitle {
+    transform: translate(-50%, 36vh);
+  } */
+}
+
+@media screen and (min-width: 2000px) {
+
+  .title,
+  .subtitle {
+    font-size: 9.5rem;
+  }
+
+  /* .subtitle {
+    transform: translate(-50%, 36vh);
+  } */
+}
