@@ -7,6 +7,8 @@ import edificio from '@/src/assets/El sueño del pibe - mural - Andres Iglesias 
 // styles
 import styles from '@/src/styles/Home.module.css';
 
+
+
 export default function Home() {
 	return (
 		<>

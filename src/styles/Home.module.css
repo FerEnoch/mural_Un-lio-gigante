@@ -7,7 +7,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
 }
 
 .image__container img {
@@ -25,40 +24,37 @@
 .title,
 .subtitle {
   position: absolute;
-  font-family: var(--font-titles);
+  font-family: var(--font-title);
   font-size: 1.6rem;
   text-transform: uppercase;
 
-  transform: translate(-50%, 6vw);
+  transform: translate(-50%);
 }
-
 
 .title {
   top: 6rem;
   left: 50%;
 }
 
-
 .subtitle {
-  bottom: 17rem;
+  top: 30rem;
   left: 50%;
-
 }
+
 
 @media screen and (min-width: 450px) {
   .image__container>img {
-    height: 150%;
+    height: 150vh;
   }
 
   .title,
   .subtitle {
-    font-size: 2.5rem;
-    transform: translate(-50%, 10vw);
+    font-size: 2.3rem;
+    transform: translate(-50%, 12vw);
   }
 
   .subtitle {
-    transform: translate(-50%, 36vh);
-
+    transform: translate(-50%, 35vh);
   }
 }
 
@@ -66,19 +62,21 @@
 
   .title,
   .subtitle {
-    font-size: 3.5rem;
+    font-size: 3.3rem;
   }
 
-  /* 
-  .subtitle {
-    transform: translate(-50%, 36vh);
+  .title {
+    transform: translate(-50%, 18vw);
+  }
 
-  } */
+  .subtitle {
+    transform: translate(-50%, 50vh);
+  }
 }
 
 @media screen and (min-width: 950px) {
   .image__container>img {
-    height: auto;
+    height: 250vh;
   }
 
   .title,
@@ -87,31 +85,36 @@
   }
 
   .subtitle {
-    transform: translate(-50%, 120vh);
-
+    transform: translate(-50%, 122vh);
   }
 }
 
 @media screen and (min-width: 1400px) {
+  .image__container>img {
+    height: 275vh;
+  }
 
   .title,
   .subtitle {
     font-size: 6rem;
   }
 
-  /* .subtitle {
-    transform: translate(-50%, 36vh);
-  } */
+  .subtitle {
+    transform: translate(-50%, 140vh);
+  }
 }
 
 @media screen and (min-width: 2000px) {
+  .image__container>img {
+    height: 300vh;
+  }
 
   .title,
   .subtitle {
     font-size: 9.5rem;
   }
 
-  /* .subtitle {
-    transform: translate(-50%, 36vh);
-  } */
+  .subtitle {
+    transform: translate(-50%, 180vh);
+  }
 }

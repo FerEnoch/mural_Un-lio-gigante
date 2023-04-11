@@ -1,10 +1,5 @@
-@font-face {
-  font-family: mecha;
-  src: url('./../assets/font/mecha_bold\ copy.ttf')
-}
-
 :root {
-  --font-titles: mecha, arial, 'sans serif';
+  --font-title: mecha, arial, 'sans serif';
 }
 
 *,
