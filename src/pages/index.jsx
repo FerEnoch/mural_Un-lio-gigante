@@ -1,12 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
-// assets
-import edificio from '@/src/assets/El sueño del pibe - mural - Andres Iglesias - niño de cobre.webp';
-
 // styles
 import styles from '@/src/styles/Home.module.css';
-
 
 
 export default function Home() {
@@ -21,7 +17,9 @@ export default function Home() {
 			<main className={styles.main}>
 				<div className={styles.image__container}> 
 					<Image
-						src={edificio} 
+						src='/El sueño del pibe - mural - Andres Iglesias - niño de cobre.webp'
+						width={2659}
+						height={4097}
 						alt='Pared blanca, parte trasera de un edificio de aproximadamente 75 metros de altura, donde se pintará el mural más grande del mundo dedicado al astro del fútbol mundial: Lionel Messi'
 						priority
 					/>
