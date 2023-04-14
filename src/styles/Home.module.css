@@ -24,11 +24,11 @@
 .title,
 .subtitle {
   position: absolute;
+  transform: translate(-50%);
   font-family: var(--font-title);
-  font-size: 1.3rem;
   text-transform: uppercase;
   text-align: center;
-  transform: translate(-50%);
+  white-space: nowrap;
 }
 
 .title {
@@ -37,7 +37,7 @@
 }
 
 .subtitle {
-  top: 30rem;
+  bottom: 9rem;
   left: 50%;
 }
 
@@ -70,7 +70,7 @@
   }
 
   .subtitle {
-    transform: translate(-50%, 50vh);
+    bottom: 13rem;
   }
 }
 
