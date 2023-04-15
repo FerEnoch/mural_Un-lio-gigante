@@ -23,7 +23,7 @@ export default function Home() {
 						alt='Pared blanca, parte trasera de un edificio de aproximadamente 75 metros de altura, donde se pintará el mural más grande del mundo dedicado al astro del fútbol mundial: Lionel Messi'
 						priority
 					/>
-					<h1 className={styles.title}>...muy pron10</h1>
+					<h1 className={styles.title}>&nbsp; &nbsp; &nbsp; muy pron10...</h1>
 					<h1 className={styles.subtitle}>...y será gigante</h1>
 				</div>
 			</main>
