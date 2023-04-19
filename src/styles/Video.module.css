@@ -1,0 +1,50 @@
+.video_container {
+  position: relative;
+  height: 0;
+  padding-top: calc(9 / 16 * 100%);
+  z-index: 10;
+}
+
+.video {
+  background-image: center / contain no-repeat url('/assets/video/promo_mural snapshot.png');
+  position: absolute;
+  top: -50%;
+  left: 0;
+
+  width: 100vw;
+  height: 115vh;
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media screen and (min-width: 600px) {
+  .video_container {
+    padding-top: calc(16 / 9 * 100%);
+  }
+
+  .video {
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .video {
+    object-position: center 65%;
+  }
+}
+
+
+@media screen and (min-width: 1500px) {
+  .video {
+    object-position: center 66%;
+    height: 105vh;
+  }
+}
+
+
+@media screen and (min-width: 1800px) {
+  .video {
+    object-position: center 70%;
+    height: 105vh;
+  }
+}

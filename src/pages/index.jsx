@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Video from './../components/Video';
 
-// styles
 import styles from '@/src/styles/Home.module.css';
 
+import building from '@/public/assets/El sueño del pibe - mural - Andres Iglesias - niño de cobre.webp';
 
 export default function Home() {
 	return (
@@ -15,17 +16,19 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<main className={styles.main}>
-				<div className={styles.image__container}> 
-					<Image
-						src='/El sueño del pibe - mural - Andres Iglesias - niño de cobre.webp'
+				<div className={styles.container}>
+					<Video />
+					{/* <Image
+						className={styles.building}
+						src={building}
 						width={2659}
 						height={4097}
 						alt='Pared blanca, parte trasera de un edificio de aproximadamente 75 metros de altura, donde se pintará el mural más grande del mundo dedicado al astro del fútbol mundial: Lionel Messi'
 						priority
-					/>
-					<h1 className={styles.title}>&nbsp; &nbsp; &nbsp; muy pron10...</h1>
-					<h1 className={styles.subtitle}>...y será gigante</h1>
+					/> */}
 				</div>
+				{/* <h1 className={styles.title}>&nbsp; &nbsp; &nbsp; muy pron10...</h1>
+				<h1 className={styles.subtitle}>...y será gigante</h1> */}
 			</main>
 		</>
 	);

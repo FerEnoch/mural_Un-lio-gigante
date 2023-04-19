@@ -1,6 +1,5 @@
-import '@/src/styles/globals.css';
 import localFont from 'next/font/local';
-
+import '@/src/styles/globals.css';
 
 const mecha_bold = localFont({ 
 	src: '../../public/font/mecha_bold-webfont.woff2',

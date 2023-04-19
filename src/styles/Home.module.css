@@ -3,21 +3,21 @@
   height: 100vh;
 }
 
-.image__container {
+.container {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.image__container img {
-  width: 100%;
-  height: 110vh;
-  object-fit: cover;
-
+.building {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%);
+
+  width: 100%;
+  height: 110vh;
+  object-fit: cover;
 }
 
 .title,
@@ -47,7 +47,7 @@
 
 
 @media screen and (min-width: 450px) {
-  .image__container>img {
+  .building {
     height: 150vh;
   }
 
@@ -79,7 +79,7 @@
 }
 
 @media screen and (min-width: 950px) {
-  .image__container>img {
+  .building {
     height: 250vh;
   }
 
@@ -94,7 +94,7 @@
 }
 
 @media screen and (min-width: 1400px) {
-  .image__container>img {
+  .building {
     height: 275vh;
   }
 
@@ -109,7 +109,7 @@
 }
 
 @media screen and (min-width: 2000px) {
-  .image__container>img {
+  .building {
     height: 300vh;
   }
 
