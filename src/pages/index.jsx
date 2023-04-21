@@ -5,8 +5,15 @@ import Video from './../components/Video';
 import styles from '@/src/styles/Home.module.css';
 
 import building from '@/public/assets/El sueño del pibe - mural - Andres Iglesias - niño de cobre.webp';
+import { useState } from 'react';
 
 export default function Home() {
+	const [ appearImage, setAppearImage ] = useState(false);
+
+	const handleVideoHiding = (videoIsHiding) => {
+		setAppearImage(videoIsHiding);
+	}; 
+
 	return (
 		<>
 			<Head>
@@ -17,18 +24,23 @@ export default function Home() {
 			</Head>
 			<main className={styles.main}>
 				<div className={styles.container}>
-					<Video />
-					{/* <Image
+					<Video videoHiding={handleVideoHiding} />
+					{ appearImage && 
+					<Image
 						className={styles.building}
 						src={building}
 						width={2659}
 						height={4097}
 						alt='Pared blanca, parte trasera de un edificio de aproximadamente 75 metros de altura, donde se pintará el mural más grande del mundo dedicado al astro del fútbol mundial: Lionel Messi'
 						priority
-					/> */}
+					/>}
 				</div>
-				{/* <h1 className={styles.title}>&nbsp; &nbsp; &nbsp; muy pron10...</h1>
-				<h1 className={styles.subtitle}>...y será gigante</h1> */}
+				{ appearImage && (
+					<>
+						<h1 className={styles.title}>&nbsp; &nbsp; &nbsp; muy pron10...</h1>
+						<h1 className={styles.subtitle}>...y será gigante</h1>
+					</>
+				)}
 			</main>
 		</>
 	);

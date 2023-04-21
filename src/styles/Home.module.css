@@ -18,6 +18,9 @@
   width: 100%;
   height: 110vh;
   object-fit: cover;
+
+  opacity: 0;
+  animation: 6s linear 2s forwards show;
 }
 
 .title,
@@ -29,6 +32,8 @@
   text-align: center;
   white-space: nowrap;
 
+  opacity: 0;
+  animation: 6s linear 3s forwards show;
 }
 
 .title {
@@ -120,5 +125,52 @@
 
   .subtitle {
     transform: translate(-50%, 180vh);
+  }
+}
+
+
+@keyframes show {
+  0% {
+    opacity: 0%;
+  }
+
+  10% {
+    opacity: 10%;
+  }
+
+  20% {
+    opacity: 20%;
+  }
+
+  30% {
+    opacity: 30%;
+  }
+
+  40% {
+    opacity: 40%;
+  }
+
+  50% {
+    opacity: 50%;
+  }
+
+  60% {
+    opacity: 60%;
+  }
+
+  70% {
+    opacity: 70%;
+  }
+
+  80% {
+    opacity: 80%;
+  }
+
+  90% {
+    opacity: 90%;
+  }
+
+  100% {
+    opacity: 100%;
   }
 }
