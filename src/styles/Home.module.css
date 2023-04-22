@@ -26,7 +26,7 @@
 
 .title,
 .subtitle {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   font-family: var(--font-title);
   text-transform: uppercase;
   text-align: center;
@@ -77,6 +77,10 @@
   .building {
     height: 200vw;
   }
+
+  .subtitle {
+    bottom: 12vh;
+  }
 }
 
 @media screen and (orientation: portrait) and (max-aspect-ratio: 9 / 16) {
@@ -92,7 +96,7 @@
 
   .title,
   .subtitle {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 }
 
