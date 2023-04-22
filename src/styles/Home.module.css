@@ -7,8 +7,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-
-  transition: all 4s linear;
 }
 
 .building {
@@ -18,22 +16,24 @@
   transform: translate(-50%);
 
   width: 100%;
-  height: 110vh;
+  height: 210vw;
   object-fit: cover;
 
   opacity: 0;
-  transition: all 6s linear;
+  transition: opacity 6s linear;
   animation: show 6s linear 2s forwards;
 }
 
 .title,
 .subtitle {
-  position: absolute;
-  transform: translate(-50%);
+  font-size: 1.3rem;
   font-family: var(--font-title);
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
+
+  position: absolute;
+  transform: translate(-50%);
 
   opacity: 0;
   transition: opacity 6s linear;
@@ -41,102 +41,95 @@
 }
 
 .title {
-  top: 6rem;
   left: 50%;
+  top: 15vh;
   text-shadow: 0px -6px 5px #999,
     0px 1px 4px #bbb;
 }
 
 .subtitle {
-  bottom: 9rem;
   left: 50%;
+  bottom: 25vh;
   text-shadow: 0px -4px 4px #888,
     0px 2px 4px #999;
 }
 
 
 /*----------- @MEDIA -----------*/
-
-@media screen and (min-width: 450px) {
+@media screen and (orientation: landscape) {
   .building {
-    height: 150vh;
+    height: 150vw;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 600px) {
+  .title {
+    top: 30vh
   }
 
   .title,
   .subtitle {
-    font-size: 2.3rem;
-    transform: translate(-50%, 12vw);
-  }
-
-  .subtitle {
-    transform: translate(-50%, 35vh);
+    font-size: 2.6rem;
   }
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (orientation: portrait) and (min-width: 400px) {
+  .building {
+    height: 200vw;
+  }
+}
+
+@media screen and (orientation: portrait) and (max-aspect-ratio: 9 / 16) {
+  .building {
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .subtitle {
+    bottom: calc(75vh - (10vw * 10));
+  }
+
+  .title,
+  .subtitle {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
 
   .title,
   .subtitle {
     font-size: 3.3rem;
   }
-
-  .title {
-    transform: translate(-50%, 18vw);
-  }
-
-  .subtitle {
-    bottom: 13rem;
-  }
 }
 
-@media screen and (min-width: 950px) {
-  .building {
-    height: 250vh;
-  }
+@media screen and (min-width: 1000px) {
 
   .title,
   .subtitle {
-    font-size: 5rem;
-  }
-
-  .subtitle {
-    transform: translate(-50%, 122vh);
+    font-size: 4.3rem;
   }
 }
 
 @media screen and (min-width: 1400px) {
-  .building {
-    height: 275vh;
-  }
 
   .title,
   .subtitle {
-    font-size: 6rem;
-  }
-
-  .subtitle {
-    transform: translate(-50%, 140vh);
+    font-size: 5.1rem;
   }
 }
 
 @media screen and (min-width: 2000px) {
-  .building {
-    height: 300vh;
-  }
 
   .title,
   .subtitle {
-    font-size: 9.5rem;
-  }
-
-  .subtitle {
-    transform: translate(-50%, 180vh);
+    font-size: 7.5rem;
   }
 }
 
 
 /*----------- @KEYFRAMES -----------*/
-
 @keyframes show {
   from {
     opacity: 0;

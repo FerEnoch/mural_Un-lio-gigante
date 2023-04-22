@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 
 import styles from '@/src/styles/Video.module.css';
 
-const VIDEO_FINISH = 32;
+const VIDEO_FINISH_SEC = 32;
 
 const Video = ({ videoHiding }) => {
 	const [ isPlaying, setIsPlaying ] = useState(true);
@@ -14,7 +14,7 @@ const Video = ({ videoHiding }) => {
 	};
 
 	const handleTimeUpdate = (evt) => {
-		if (Math.round(evt.target.currentTime) === VIDEO_FINISH) {
+		if (Math.round(evt.target.currentTime) === VIDEO_FINISH_SEC) {
 			setIsHiding(true);
 		};
 	};
@@ -41,11 +41,11 @@ const Video = ({ videoHiding }) => {
 				  onTimeUpdate={handleTimeUpdate}
       	>
       		<source 
-      			src='/assets/video/promo_mural mobile.webm'
+      			src='/assets/video/promo_mural.webm'
       			type='video/webm'
       		/>
       		<source 
-      			src='/assets/video/promo_mural mobile.mp4'
+      			src='/assets/video/promo_mural.mp4'
       			type='video/mp4'
       		/>
       	</video>
