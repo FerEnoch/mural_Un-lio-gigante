@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 
 import styles from '@/src/styles/Video.module.css';
 
+const VIDEO_FINISH = 32;
+
 const Video = ({ videoHiding }) => {
 	const [ isPlaying, setIsPlaying ] = useState(true);
 	const [ isHiding, setIsHiding ] = useState(false);
@@ -12,7 +14,7 @@ const Video = ({ videoHiding }) => {
 	};
 
 	const handleTimeUpdate = (evt) => {
-		if (Math.round(evt.target.currentTime) === 28) {
+		if (Math.round(evt.target.currentTime) === VIDEO_FINISH) {
 			setIsHiding(true);
 		};
 	};
@@ -26,7 +28,7 @@ const Video = ({ videoHiding }) => {
 			{ isPlaying && (
 				<div className={styles.video_container}>
       	<video
-      		className={isHiding ? styles.onHiding : styles.video}
+      		className={`${styles.video} ${isHiding && styles.onHiding}`}
       		width='600'
       		height='800'
       		autoPlay
