@@ -13,7 +13,7 @@
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 80%;
   opacity: 1;
 }
 
@@ -24,34 +24,20 @@
 
 
 /*----------- @MEDIA -----------*/
+@media screen and (orientation: portrait) and (min-width: 1000px) {
+  .video {
+    left: 5vw;
+    max-width: 90vw;
+    object-position: center 70%;
+  }
+}
+
 @media screen and (orientation: landscape) {
   .video_container {
     aspect-ratio: 16 / 9;
   }
 
   .video {
-    left: 10vw;
-    max-width: 80vw;
-    object-position: center 70%;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  .video_container {
-    aspect-ratio: 16 / 9;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .video {
-    object-position: center 65%;
-  }
-}
-
-@media screen and (min-width: 1800px) {
-  .video {
-    object-position: center 70%;
-    left: 12.5vw;
-    max-width: 75vw;
+    object-position: center 10%;
   }
 }

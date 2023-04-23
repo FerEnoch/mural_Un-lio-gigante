@@ -28,8 +28,8 @@
 .subtitle {
   font-size: 1.7rem;
   font-family: var(--font-title);
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
   white-space: nowrap;
 
   position: absolute;
@@ -55,7 +55,7 @@
 }
 
 
-/*----------- @MEDIA -----------*/
+/*--------------------- @MEDIA ---------------------*/
 @media screen and (orientation: landscape) {
   .building {
     height: 150vw;
@@ -133,7 +133,7 @@
 }
 
 
-/*----------- @KEYFRAMES -----------*/
+/*--------------------- @KEYFRAMES ---------------------*/
 @keyframes show {
   from {
     opacity: 0;
