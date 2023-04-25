@@ -22,8 +22,13 @@
   transition: opacity 6s linear;
 }
 
+.volume_buttons {
+  position: absolute;
+  bottom: 25%;
+  right: 10%;
+}
 
-/*----------- @MEDIA -----------*/
+/*-------------------- @MEDIA --------------------*/
 @media screen and (orientation: portrait) and (min-width: 1000px) {
   .video {
     left: 5vw;
